@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    内容区
+    <a-button type="primary">头部</a-button>
   </div>
 </template>
 <script>

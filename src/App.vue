@@ -1,16 +1,13 @@
 <template>
-  <a-button type="primary">
-      Primary
-    </a-button>
-  <!-- <header>
+  <header>
     头部
-  </header> -->
-  <!-- <section class="app-container">
+  </header>
+  <section class="app-container">
     <menu>1231</menu>
     <section class="app-body">
       <router-view></router-view>
-    </section> -->
-  <!-- </section> -->
+    </section>
+   </section>
 </template>
 
 <style lang="less">
