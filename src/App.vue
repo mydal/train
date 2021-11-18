@@ -1,14 +1,17 @@
 <template>
-  <header>
-    头部
-  </header>
-  <section class="app-container">
-    <menu>1231</menu>
-    <section class="app-body">
+  <!-- <header></header> -->
+  <!-- <section class="app-container"> -->
+    <!-- <left></left> -->
+    <!-- <menu>
+      
+    </menu> -->
+    <!-- <section class="app-body"> -->
       <router-view></router-view>
-    </section>
-   </section>
+      
+    <!-- </section> -->
+   <!-- </section> -->
 </template>
+
 
 <style lang="less">
 @import "styles/reset";
@@ -26,33 +29,33 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: @white;
+  // text-align: center;
+  // color: @white;
 }
 
-header {
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: @primary;
-}
-.app-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  padding-top: 50px;
-  menu {
-    width: 200px;
-    height: 100%;
-    background: @background-primary;
-  }
-  .app-body {
-    height: 100%;
-    flex: 1;
-    overflow: auto;
-    color: @black;
-  }
-}
+// header {
+//   width: 100%;
+//   height: 50px;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   background: @primary;
+// }
+// .app-container {
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   padding-top: 50px;
+//   menu {
+//     width: 200px;
+//     height: 100%;
+//     background: @background-primary;
+//   }
+//   .app-body {
+//     height: 100%;
+//     flex: 1;
+//     overflow: auto;
+//     color: @black;
+//   }
+// }
 </style>
