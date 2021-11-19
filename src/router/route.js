@@ -11,15 +11,27 @@ const routes = [
     children: [
     
       {
+        /** 套题列表路由 */
         path: '/qlist',
-        name: '套题列表页面',
+        name: '/qlist',
         component: () => import(/* webpackChunkName: "Home" */ '../views/home/qlist.vue'),
+      
       },
       {
-        path: '/klist',
-        name: '题库列表页面',
-        component: () => import(/* webpackChunkName: "Home" */ '../views/home/klist.vue'),
+        path: '/qlistAdd',
+        name: 'qlistAdd',
+        component: () => import(/* webpackChunkName: "Home" */ '../views/home/qlistAdd.vue'),
+
       }
+      ,
+      {
+        /** 题库列表路由 */
+        path: '/klist',
+        name: '/klist',
+        component: () => import(/* webpackChunkName: "Home" */ '../views/home/klist.vue'),
+      },
+      
+    
     ]
   },
   {

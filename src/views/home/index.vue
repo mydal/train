@@ -33,6 +33,7 @@ export default defineComponent({
 </script>
 <style>
 .ant-layout {
+  overflow: auto;
   height: 100%;
 }
 #components-layout-demo-top-side-2 .logo {
