@@ -10,10 +10,10 @@
   </a-layout>
 </template>
 <script>
-import batten from "./batten";
-import left from "./left";
-import { defineComponent, ref } from "vue";
-import contents from "./contents";
+import batten from "../../components/batten";
+import left from "../../components/left";
+import { defineComponent } from "vue";
+import contents from "../../components/contents";
 
 export default defineComponent({
   name: "home",
@@ -26,10 +26,7 @@ export default defineComponent({
 
   setup() {
     return {
-      selectedKeys1: ref(["2"]),
-      selectedKeys2: ref(["1"]),
-      collapsed: ref(false),
-      openKeys: ref(["sub1"]),
+  
     };
   },
 });
