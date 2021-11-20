@@ -23,15 +23,17 @@ export default defineComponent({
     left,
     contents,
   },
-
-  setup() {
-    return {
-  
-    };
-  },
 });
 </script>
-<style>
+<style lang="less">
+@import "../../styles/variable";
+@import "../../styles/global";
+@import "../../styles/reset";
+
+.header {
+  background-color: @background-primary;
+}
+
 .ant-layout {
   overflow: auto;
   height: 100%;

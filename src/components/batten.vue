@@ -1,6 +1,7 @@
 <template>
    <!-- 头部 -->
     <a-layout-header class="header">
+      
       <div class="logo" />
       <a-menu
         theme="dark"
@@ -18,3 +19,6 @@ export default {
     name:"batten"
 }
 </script>
+<style lang="less">
+
+</style>

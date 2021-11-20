@@ -42,6 +42,7 @@ const columns = [
   },
   {
     title: "操作",
+     fixed: 'right',
     dataIndex: "operation",
     key: "operation",
     slots: { customRender: "operation" },

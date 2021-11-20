@@ -41,6 +41,14 @@ const routes = [
     // this generates a separate chunk (UserCenter.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "userCenter" */ '../views/user')
+  },
+  {
+    path: '/test',
+    name: 'test',
+    // route level code-splitting
+    // this generates a separate chunk (UserCenter.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "userCenter" */ '../views/home/test')
   }
 ]
 export default routes

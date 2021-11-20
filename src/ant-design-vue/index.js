@@ -1,4 +1,4 @@
-import { Layout, Button, Menu,Table,Divider,Breadcrumb,Tag,Popconfirm,Select,Input,Space } from 'ant-design-vue'
+import { Layout, Button, Menu,Table,Divider,Breadcrumb,Tag,Popconfirm,Select,Input,Space,InputNumber } from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 // import 'ant-design-vue/dist/antd.dark.css';
 
@@ -13,7 +13,8 @@ const components = [
     Popconfirm,
     Select,
     Input,
-    Space
+    Space,
+    InputNumber
 ]
 
 

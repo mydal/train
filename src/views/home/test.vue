@@ -1,6 +1,6 @@
 <template>
-  <!-- 左侧 -->
-  <a-layout-sider v-model:collapsed="collapsed" collapsible >
+  <a-layout>
+    <a-layout-sider v-model:collapsed="collapsed" collapsible :trigger="null">
     <div class="logo" />
     <a-menu theme="dark" v-model:selectedKeys="selectedKeys" mode="inline">
       <a-sub-menu key="sub1">
@@ -15,24 +15,42 @@
       </a-sub-menu>
     </a-menu>
   </a-layout-sider>
+    <a-layout>
+      <a-layout-header style="background: #fff; padding: 0">
+        <menu-unfold-outlined
+          v-if="collapsed"
+          class="trigger"
+          @click="() => (collapsed = !collapsed)"
+        />
+        <menu-fold-outlined v-else class="trigger" @click="() => (collapsed = !collapsed)" />
+      </a-layout-header>
+    
+    </a-layout>
+  </a-layout>
 </template>
 <script>
-import { UserOutlined } from "@ant-design/icons-vue";
-import { ref } from "vue";
+import {
+  UserOutlined,
 
-export default {
-  name: "left",
-
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+} from '@ant-design/icons-vue';
+import { defineComponent, ref } from 'vue';
+export default defineComponent({
   components: {
     UserOutlined,
+   
+    MenuUnfoldOutlined,
+    MenuFoldOutlined,
   },
+
   setup() {
     return {
-      selectedKeys: ref(["0"]),
+      selectedKeys: ref(['1']),
       collapsed: ref(false),
     };
   },
-  methods: {
+    methods: {
     //路由内容切换
     changeMenu(route) {
       console.log(route);
@@ -40,5 +58,5 @@ export default {
       this.$router.push(route);
     },
   },
-};
+});
 </script>
