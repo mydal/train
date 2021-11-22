@@ -3,6 +3,29 @@
   <div class="sheet" v-for="item in sheetArr" v-bind:key="item.id">
     <div class="radio" v-show="item.type == radio">
       <div class="radioLeft">
+        <p>{{ item.id }}.[{{ item.type }}]</p>
+        <a-upload
+          v-show="isUpload"
+          action=""
+          list-type="picture"
+          v-model:file-list="fileList"
+        >
+          <a-button>
+            <upload-outlined></upload-outlined>
+            上传图片
+          </a-button>
+        </a-upload>
+        <input
+          class="ant-input ant-input-borderless editInput f16"
+          type="text"
+          placeholder="点击输入题目(支持图片)"
+          @focus="focusfns()"
+        />
+      </div>
+      <div class="radioRight">删除 复制 上移 下移</div>
+    </div>
+    <div class="check radio" v-show="item.type == check">
+      <div class="radioLeft">
         <p>{{ item.id }}.[单选]</p>
         <a-upload
           v-show="isUpload"
@@ -24,7 +47,6 @@
       </div>
       <div class="radioRight">删除 复制 上移 下移</div>
     </div>
-    <div class="check" v-show="item.type == check">{{ item.type }}</div>
     <div class="judge" v-show="item.type == judge">{{ item.type }}</div>
   </div>
 
@@ -85,6 +107,7 @@ export default defineComponent({
   data() {
     return {
       i: 0,
+      cut: "",
     };
   },
 
@@ -116,6 +139,14 @@ export default defineComponent({
   },
   methods: {
     point(type) {
+      console.log(type);
+      if (type == "radio") {
+        this.cut = "[单选]";
+      } else if (type == "check") {
+        this.cut = "[多选]";
+      } else {
+        this.cut = "[判断]";
+      }
       this.i++;
       let obj = {
         id: this.i,
@@ -130,12 +161,10 @@ export default defineComponent({
     },
   },
 });
-
-
 </script>
 
 <style lang="less">
-@import "../styles/variable";
+@import "../../styles/variable";
 .add {
   border: 2px solid #eee;
   //   display: flex;
@@ -186,7 +215,6 @@ export default defineComponent({
   margin-top: @mt;
   margin-left: @ml;
 }
-
 .radio {
   border: 2px solid #eee;
   display: flex;

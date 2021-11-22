@@ -11,8 +11,8 @@
 <script>
 import { defineComponent } from "vue";
 
-import qlistAddTop from "../../components/qlistAddTop";
-import qlistAddEstablish from "../../components/qlistAddEstablish";
+import qlistAddTop from "../../components/qlist/qlistAddTop";
+import qlistAddEstablish from "../../components/qlist/qlistAddEstablish";
 export default defineComponent({
   name: "qlistAdd",
   setup() {},

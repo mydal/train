@@ -10,10 +10,10 @@
   </a-layout>
 </template>
 <script>
-import batten from "../../components/batten";
-import left from "../../components/left";
+import batten from "../../components/batten/index";
+import left from "../../components/left/index";
 import { defineComponent } from "vue";
-import contents from "../../components/contents";
+import contents from "../../components/contents/index";
 
 export default defineComponent({
   name: "home",

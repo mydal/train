@@ -14,13 +14,13 @@ const routes = [
         /** 套题列表路由 */
         path: '/qlist',
         name: '/qlist',
-        component: () => import(/* webpackChunkName: "Home" */ '../views/home/qlist.vue'),
+        component: () => import(/* webpackChunkName: "Home" */ '../views/qlist'),
       
       },
       {
         path: '/qlistAdd',
         name: 'qlistAdd',
-        component: () => import(/* webpackChunkName: "Home" */ '../views/home/qlistAdd.vue'),
+        component: () => import(/* webpackChunkName: "Home" */ '../views/qlist/qlistAdd.vue'),
 
       }
       ,
@@ -28,7 +28,7 @@ const routes = [
         /** 题库列表路由 */
         path: '/klist',
         name: '/klist',
-        component: () => import(/* webpackChunkName: "Home" */ '../views/home/klist.vue'),
+        component: () => import(/* webpackChunkName: "Home" */ '../views/klist'),
       },
       
     
@@ -42,13 +42,6 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "userCenter" */ '../views/user')
   },
-  {
-    path: '/test',
-    name: 'test',
-    // route level code-splitting
-    // this generates a separate chunk (UserCenter.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "userCenter" */ '../views/home/test')
-  }
+
 ]
 export default routes
